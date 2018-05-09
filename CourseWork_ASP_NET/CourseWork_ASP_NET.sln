@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseWork_ASP_NET", "CourseWork_ASP_NET\CourseWork_ASP_NET.csproj", "{A571123A-901E-4BB5-8303-F80B628B6AA3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CourseWork_ASP_NET_MVC", "CourseWork_ASP_NET_MVC\CourseWork_ASP_NET_MVC.csproj", "{1A1CEF93-AF6D-48D5-A7DD-F1FAD30B52DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A571123A-901E-4BB5-8303-F80B628B6AA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A571123A-901E-4BB5-8303-F80B628B6AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A571123A-901E-4BB5-8303-F80B628B6AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A571123A-901E-4BB5-8303-F80B628B6AA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A1CEF93-AF6D-48D5-A7DD-F1FAD30B52DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A1CEF93-AF6D-48D5-A7DD-F1FAD30B52DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A1CEF93-AF6D-48D5-A7DD-F1FAD30B52DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A1CEF93-AF6D-48D5-A7DD-F1FAD30B52DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
