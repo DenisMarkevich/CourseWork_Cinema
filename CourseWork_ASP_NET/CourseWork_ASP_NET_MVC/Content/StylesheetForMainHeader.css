@@ -1,0 +1,114 @@
+﻿* {
+    transition: all .2s;
+}
+
+.MainHeader {
+    width: 100%;
+    height: 800px
+}
+
+body {
+    margin-top: 0
+}
+
+.HeaderDiv {
+    background-color: black;
+    width: 100%;
+    height: 15%;
+    background: linear-gradient(to bottom, black, #2c2d30)
+}
+
+.CarouselDiv {
+    background-color: #15181c;
+    width: 100%;
+    height: 85%;
+    background: linear-gradient(to bottom, #2c2d30, black)
+}
+
+.LeftDivInHeaderDiv {
+    width: 15%;
+    height: 100%;
+    float: left
+}
+
+.CenterDivInHeaderDiv {
+    width: 70%;
+    height: 100%;
+    float: left
+}
+
+.RightDivInHeaderDiv {
+    width: 15%;
+    height: 100%;
+    float: left
+}
+
+.TopDivInCenterDivInHeader {
+    height: 60%;
+    width: 100%
+}
+
+.BottomDivInCenterDivInHeader {
+    height: 40%;
+    width: 100%
+}
+
+.AdditionalDivInBottomDiv {
+    width: 20%;
+    height: 100%;
+    float: left
+}
+
+.MainDivInBottomDiv {
+    width: 20%;
+    height: 100%;
+    float: left
+}
+
+.p_in_header {
+    font-family: Algerian;
+    font-size: 20px;
+    color: #515359;
+}
+
+    .p_in_header:hover {
+        color: #ffffff;
+        text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #0000ff, 0 0 80px #0000ff, 0 0 90px #0000ff, 0 0 100px #0000ff, 0 0 150px #0000ff;
+        cursor: pointer;
+    }
+
+.p_Logo {
+    font-size:50px
+}
+
+@font-face {
+    font-family: 'Dosis', Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1#neon-tubing {
+    text-align: center;
+    font-size:70px;
+    font-family: Neon80sRegular, sans-serif;
+    background-size: cover;
+    color: #fee;
+}
+
+@keyframes neonspark {
+    0% {
+        text-shadow: 0 0 10px rgba(255,255,255,.8), 0 0 20px rgba(255,255,255,.8), 0 0 22px rgba(255,255,255,.8), 0 0 40px rgba(66,220,219,.8), 0 0 60px rgba(66,220,219,.8), 0 0 80px rgba(66,220,219,.5), 0 0 100px rgba(66,220,219,.5), 0 0 140px rgba(66,220,219,.5), 0 0 200px rgba(66,220,219,.5);
+    }
+
+    100% {
+        text-shadow: 0 0 2px rgba(255,255,255,.8), 0 0 8px rgba(255,255,255,.8), 0 0 10px rgba(255,255,255,.8), 0 0 20px rgba(66,220,219,.8), 0 0 30px rgba(66,220,219,.8), 0 0 40px rgba(66,220,219,.8), 0 0 50px rgba(66,220,219,.5), 0 0 80px rgba(66,220,219,.5);
+    }
+}
+
+h1#neon-tubing {
+    animation: neonspark 1s 3s forwards;
+}
+
+    h1#neon-tubing span {
+        animation: neonspark 4s 3s infinite;
+    }
