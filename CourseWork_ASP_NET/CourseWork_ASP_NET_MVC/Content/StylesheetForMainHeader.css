@@ -7,8 +7,9 @@
     height: 150px
 }
 
-body {
-    margin-top: 0
+#idbody {
+    margin-top: 0;
+    background: #002b70
 }
 
 .HeaderDiv {
@@ -72,9 +73,17 @@ body {
         cursor: pointer;
     }
 
+.Logo{
+    font-family: Arial;
+    font-size: 50px
+}
+
 .p_Logo {
     font-size: 50px;
     font-family: 'Verdana';
+}
+.classname {
+    font-family: Verdana;
 }
 
 

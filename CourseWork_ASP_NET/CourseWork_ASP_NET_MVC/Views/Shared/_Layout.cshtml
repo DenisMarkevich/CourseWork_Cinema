@@ -11,7 +11,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @*<script src="~/Scripts/Preloader.js"></script>*@
-
+  
 </head>
 <body>
     <header class="MainHeader">
@@ -20,7 +20,7 @@
             </div>
             <div class="CenterDivInHeaderDiv" style="text-align:center">
                 <div class="TopDivInCenterDivInHeader">
-                    <h1 id="neon-tubing">C  I  N  E  M  A</h1>
+                    @Html.ActionLink("C  I  N  E  M  A", "Index", null, new { @class = "Logo ", id = "neon-tubing" })
                 </div>
                 <div class="BottomDivInCenterDivInHeader">
                     <div class="AdditionalDivInBottomDiv"></div>
@@ -31,7 +31,8 @@
                         <p class="p_in_header"><b>РОЗКЛАД</b></p>
                     </div>
                     <div class="MainDivInBottomDiv">
-                        <p class="p_in_header"><b>КІНОЗАЛИ</b></p>
+                        @Html.ActionLink("КІНОЗАЛИ", "About", null, new { @class="classname p_in_header" })
+                        @*<p class=""><b>КІНОЗАЛИ</b></p>*@
                     </div>
                     <div class="AdditionalDivInBottomDiv"></div>
                 </div>
