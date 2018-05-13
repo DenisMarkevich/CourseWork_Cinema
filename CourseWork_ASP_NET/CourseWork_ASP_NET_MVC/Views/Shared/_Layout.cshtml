@@ -2,21 +2,21 @@
 <html>
 <head>
     <!--CSS-->
-    <link href="~/Content/StylesheetForMainHeader.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
-
+    @*<link href="~/Content/preloader.css" rel="stylesheet" />*@
+    <link href="~/Content/StyleSheetForMainHeader.css" rel="stylesheet" />
 
     <meta charset="utf-8" />
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @*<script src="~/Scripts/Preloader.js"></script>*@
 
 </head>
 <body>
     <header class="MainHeader">
         <div class="HeaderDiv">
             <div class="LeftDivInHeaderDiv">
-
             </div>
             <div class="CenterDivInHeaderDiv" style="text-align:center">
                 <div class="TopDivInCenterDivInHeader">
@@ -43,7 +43,18 @@
         <div class="CarouselDiv">
 
         </div>
+
+
+        @*<div class="preloader">
+            <div class="loader"></div>
+        </div>*@
+
     </header>
+    @*<div class="holder" id="my_preloader">
+        <div class="preloader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>*@
+
+
 
     <div class="container body-content">
         @RenderBody()
