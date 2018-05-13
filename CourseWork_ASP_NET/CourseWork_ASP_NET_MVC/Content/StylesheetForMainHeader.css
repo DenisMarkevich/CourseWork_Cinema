@@ -4,7 +4,7 @@
 
 .MainHeader {
     width: 100%;
-    height: 800px
+    height: 150px
 }
 
 body {
@@ -14,16 +14,11 @@ body {
 .HeaderDiv {
     background-color: black;
     width: 100%;
-    height: 15%;
-    background: linear-gradient(to bottom, black, #2c2d30)
+    height: 100%;
+    background: linear-gradient(to bottom, black, #252628)
 }
 
-.CarouselDiv {
-    background-color: #15181c;
-    width: 100%;
-    height: 85%;
-    background: linear-gradient(to bottom, #2c2d30, black)
-}
+
 
 .LeftDivInHeaderDiv {
     width: 15%;
@@ -66,25 +61,26 @@ body {
 }
 
 .p_in_header {
-    font-family: Algerian;
+    font-family: Arial;
     font-size: 20px;
     color: #515359;
 }
 
     .p_in_header:hover {
-        color: #ffffff;
-        text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #0000ff, 0 0 80px #0000ff, 0 0 90px #0000ff, 0 0 100px #0000ff, 0 0 150px #0000ff;
+        color: #3c3f44;
+        text-shadow: 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 6px #ffffff, 0 0 10px white, 0 0 12px white, 0 0 15px white, 0 0 25px white, 0 0 50px #0000ff;
         cursor: pointer;
     }
 
 .p_Logo {
-    font-size: 50px
+    font-size: 50px;
+    font-family: 'Verdana';
 }
 
+
 @font-face {
-    font-family: 'Dosis', Helvetica, Arial, sans-serif;
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'FredokaOne-Regular';
+    src: url('Images/FredokaOne-Regular.otf') format('opentype');
 }
 
 h1#neon-tubing {
@@ -92,16 +88,16 @@ h1#neon-tubing {
     font-size: 70px;
     font-family: Neon80sRegular, sans-serif;
     background-size: cover;
-    color: #fee;
+    color: #3c3f44;
 }
 
 @keyframes neonspark {
     0% {
-        text-shadow: 0 0 10px rgba(255,255,255,.8), 0 0 20px rgba(255,255,255,.8), 0 0 22px rgba(255,255,255,.8), 0 0 40px rgba(66,220,219,.8), 0 0 60px rgba(66,220,219,.8), 0 0 80px rgba(66,220,219,.5), 0 0 100px rgba(66,220,219,.5), 0 0 140px rgba(66,220,219,.5), 0 0 200px rgba(66,220,219,.5);
+        text-shadow: 0 0 10px white, 0 0 20px white, 0 0 22px white, 0 0 40px white, 0 0 60px white, 0 0 80px white, 0 0 100px white, 0 0 140px white, 0 0 200px white;
     }
 
     100% {
-        text-shadow: 0 0 2px rgba(255,255,255,.8), 0 0 8px rgba(255,255,255,.8), 0 0 10px rgba(255,255,255,.8), 0 0 20px rgba(66,220,219,.8), 0 0 30px rgba(66,220,219,.8), 0 0 40px rgba(66,220,219,.8), 0 0 50px rgba(66,220,219,.5), 0 0 80px rgba(66,220,219,.5);
+        text-shadow: 0 0 2px white, 0 0 8px white, 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 80px white;
     }
 }
 
