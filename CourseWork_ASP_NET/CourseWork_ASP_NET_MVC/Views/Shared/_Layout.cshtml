@@ -1,13 +1,53 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <!--CSS-->
+    <link href='https://fonts.googleapis.com/css?family=Dosis:600' rel='stylesheet' type='text/css'>
+    @*<link href="~/Content/preloader.css" rel="stylesheet" />*@
+    <link href="~/Content/StyleSheetForMainHeader.css" rel="stylesheet" />
+
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @*<script src="~/Scripts/Preloader.js"></script>*@
+
 </head>
 <body>
+    <header class="MainHeader">
+        <div class="HeaderDiv">
+            <div class="LeftDivInHeaderDiv">
+            </div>
+            <div class="CenterDivInHeaderDiv" style="text-align:center">
+                <div class="TopDivInCenterDivInHeader">
+                    <h1 id="neon-tubing">C  I  N  E  M  A</h1>
+                </div>
+                <div class="BottomDivInCenterDivInHeader">
+                    <div class="AdditionalDivInBottomDiv"></div>
+                    <div class="MainDivInBottomDiv">
+                        <p class="p_in_header"><b>ФІЛЬМИ</b></p>
+                    </div>
+                    <div class="MainDivInBottomDiv">
+                        <p class="p_in_header"><b>РОЗКЛАД</b></p>
+                    </div>
+                    <div class="MainDivInBottomDiv">
+                        <p class="p_in_header"><b>КІНОЗАЛИ</b></p>
+                    </div>
+                    <div class="AdditionalDivInBottomDiv"></div>
+                </div>
+            </div>
+            <div class="RightDivInHeaderDiv">
+
+            </div>
+        </div>
+        @*<div class="preloader">
+            <div class="loader"></div>
+        </div>*@
+    </header>
+    @*<div class="holder" id="my_preloader">
+        <div class="preloader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>*@
+
     @RenderBody()
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

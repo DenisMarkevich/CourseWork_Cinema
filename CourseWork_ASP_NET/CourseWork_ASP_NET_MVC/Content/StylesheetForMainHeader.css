@@ -1,0 +1,110 @@
+﻿* {
+    transition: all .2s;
+}
+
+.MainHeader {
+    width: 100%;
+    height: 150px
+}
+
+body {
+    margin-top: 0
+}
+
+.HeaderDiv {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, black, #252628)
+}
+
+
+
+.LeftDivInHeaderDiv {
+    width: 15%;
+    height: 100%;
+    float: left
+}
+
+.CenterDivInHeaderDiv {
+    width: 70%;
+    height: 100%;
+    float: left
+}
+
+.RightDivInHeaderDiv {
+    width: 15%;
+    height: 100%;
+    float: left
+}
+
+.TopDivInCenterDivInHeader {
+    height: 60%;
+    width: 100%
+}
+
+.BottomDivInCenterDivInHeader {
+    height: 40%;
+    width: 100%
+}
+
+.AdditionalDivInBottomDiv {
+    width: 20%;
+    height: 100%;
+    float: left
+}
+
+.MainDivInBottomDiv {
+    width: 20%;
+    height: 100%;
+    float: left
+}
+
+.p_in_header {
+    font-family: Arial;
+    font-size: 20px;
+    color: #515359;
+}
+
+    .p_in_header:hover {
+        color: #3c3f44;
+        text-shadow: 0 0 2px #ffffff, 0 0 4px #ffffff, 0 0 6px #ffffff, 0 0 10px white, 0 0 12px white, 0 0 15px white, 0 0 25px white, 0 0 50px #0000ff;
+        cursor: pointer;
+    }
+
+.p_Logo {
+    font-size: 50px;
+    font-family: 'Verdana';
+}
+
+
+@font-face {
+    font-family: 'FredokaOne-Regular';
+    src: url('Images/FredokaOne-Regular.otf') format('opentype');
+}
+
+h1#neon-tubing {
+    text-align: center;
+    font-size: 70px;
+    font-family: Neon80sRegular, sans-serif;
+    background-size: cover;
+    color: #3c3f44;
+}
+
+@keyframes neonspark {
+    0% {
+        text-shadow: 0 0 10px white, 0 0 20px white, 0 0 22px white, 0 0 40px white, 0 0 60px white, 0 0 80px white, 0 0 100px white, 0 0 140px white, 0 0 200px white;
+    }
+
+    100% {
+        text-shadow: 0 0 2px white, 0 0 8px white, 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 80px white;
+    }
+}
+
+h1#neon-tubing {
+    animation: neonspark 1s 3s forwards;
+}
+
+    h1#neon-tubing span {
+        animation: neonspark 4s 3s infinite;
+    }
