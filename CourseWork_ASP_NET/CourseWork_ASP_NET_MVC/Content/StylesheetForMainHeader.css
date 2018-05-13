@@ -19,8 +19,6 @@
     background: linear-gradient(to bottom, black, #252628)
 }
 
-
-
 .LeftDivInHeaderDiv {
     width: 15%;
     height: 100%;
@@ -78,10 +76,6 @@
     font-size: 50px
 }
 
-.p_Logo {
-    font-size: 50px;
-    font-family: 'Verdana';
-}
 .classname {
     font-family: Verdana;
 }
