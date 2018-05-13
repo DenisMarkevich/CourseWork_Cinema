@@ -40,25 +40,15 @@
 
             </div>
         </div>
-        <div class="CarouselDiv">
-
-        </div>
-
-
         @*<div class="preloader">
             <div class="loader"></div>
         </div>*@
-
     </header>
     @*<div class="holder" id="my_preloader">
         <div class="preloader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>*@
 
-
-
-    <div class="container body-content">
-        @RenderBody()
-    </div>
+    @RenderBody()
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
