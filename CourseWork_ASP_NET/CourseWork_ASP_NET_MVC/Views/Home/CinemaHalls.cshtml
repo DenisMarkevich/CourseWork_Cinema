@@ -1,0 +1,124 @@
+﻿@{
+    ViewBag.Title = "Cinema";
+}
+
+<style>
+    .container-for-rows {
+        width: 100%;
+        overflow-y: hidden;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .place {
+        color: white;
+        margin: 1px;
+        width: 20px;
+        height: 18px;
+        font-size: 11px;
+        border: 1px solid black;
+        display: inline-block;
+    }
+
+    .titel-cinema-halls {
+        text-align: center;
+        color: white
+    }
+</style>
+
+<div style="width:100%; background-color:#002E4B">
+    <h2 class="titel-cinema-halls">Зал "Альфа"</h2>
+    <div style="width:100%">
+        <div style="width:40%; height:300px; float:left; margin-left:10%; padding-top:2%; text-align:center; color:white">
+            Picture
+        </div>
+        <div style="width:40%; height:300px; float:left; margin-right:10%; padding-top:2%; text-align:justify; color:white">
+            Кінозал "Альфа" розрахований на 302 місця, обладнаний цифровим проектором "Barco" 
+            для перегляду 3D фільмів, акустична система кінозалу — JBL, цифровий звуковий процесор — DolbyDigital. 
+            Спроектований спеціальним чином зал збільшує видимий простір у кінотеатрі. Переглядаючи фільм у 
+            форматі 3D у глядачів складається враження, що всі дії відбуваються прямо перед ними. Збільшений 
+            видимий простір забезпечує найкращий 3D-ефект.
+        </div>
+    </div>
+
+    <div style="width:100%">
+        <div>
+            <h4 class="titel-cinema-halls">Схема залу</h4>
+            <div>
+
+            </div>
+            <div style="width:100%">
+                <div style="width:37%; font-size:16px; color:white; margin-left:13%; float:left"><p>&lArr;Вхід/Вихід</p></div>
+                <div style="width:37%; font-size:16px; color:white; margin-right:13%; float:right; text-align:right"><p>Аварійний вихід&rArr;</p></div>
+            </div>
+            <br/>
+            <div style="width:100%">
+                <div style="width:34%; font-size:16px; color:white; margin-left:16%; float:left"><p>Ряд</p></div>
+                <div style="width:34%; font-size:16px; color:white; margin-right:16%; float:right; text-align:right"><p>Ряд</p></div>
+            </div>
+        </div>
+        <div class="container-for-rows">
+            @for (int row = 0; row < ViewBag.Array.Length; ++row)
+            {
+                <div style="width:100%; height:30px;">
+                    <span style="font-size:16px; color:white; margin-right:20px">@(row + 1)-й</span> 
+                    @for (int position = ViewBag.Array[row]; position >= 1; --position)
+                    {
+                        <div class="place" style="background-color: #0A5D91;">@position</div>
+                    }
+                    <span style="font-size:16px; color:white; margin-left:20px">@(row + 1)-й</span> 
+                </div>
+            }
+        
+        </div>
+    </div>
+</div>
+
+<div style="width:100%; background-color:#560707">
+    <h2 class="titel-cinema-halls">Зал "Парадиз"</h2>
+    <div style="width:100%">
+        <div style="width:40%; height:350px; float:left; margin-left:10%; padding-top:2%; text-align:center; color:white">
+            Picture
+        </div>
+        <div style="width:40%; height:350px; float:left; margin-right:10%; padding-top:2%; text-align:justify; color:white">
+            У залі "Парадиз" встановлено найновіший проектор Christie 4230, що дозволяє транслювати 
+            фільми за технологією 4K&HFR. Ця революційна розробка вдвічі перевершує стандарт для 
+            цифрового кіно 2K. Відтепер глядачі можуть насолоджуватися переглядом кінострічок на 
+            великому екрані розміром 10×20 м, у високій якості зображення. Плавне природне відтворення, 
+            чудова контрастність, яскрава насичена картинка і жодного натяку на переривання зображення 
+            чи ефект решітки. Крім того, новий кінозал обладнаний зручними кріслами, які розміщені так, 
+            аби з кожного місця, яких у залі є аж 377, переглядати фільми було маскимально комфортно.
+        </div>
+    </div>
+
+    <div style="width:100%">
+        <div>
+            <h4 class="titel-cinema-halls">Схема залу</h4>
+        </div>
+        <div class="container-for-rows">
+            @for (int row = 0; row < ViewBag.Array.Length; ++row)
+            {
+                <div style="width:100%;  height:30px">
+                <span style="font-size:13px; color:white; margin-right:20px">@(row + 1)-й</span> 
+                    @for (int position = ViewBag.Array[row]; position >= 1; --position)
+                    {
+                        if (position == (ViewBag.Array[row] / 2) && row == (ViewBag.Array.Length - 2))
+                        {
+                            <div class="place" style="border:none; height:0; width:150px"></div>
+                        }
+                        if (position == (ViewBag.Array[row] / 2) && row == ViewBag.Array.Length - 1)
+                        {
+                            <div class="place" style="border:none; height:0; width:200px"></div>
+                        }
+                        <div class="place" style="background-color: #900A0A;">@position</div>
+                    }
+                <span style="font-size:13px; color:white; margin-left:20px">@(row + 1)-й</span> 
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+

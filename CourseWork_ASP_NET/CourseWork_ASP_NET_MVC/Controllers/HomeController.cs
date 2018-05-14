@@ -13,9 +13,9 @@ namespace CourseWork_ASP_NET_MVC.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult CinemaHalls()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Array = new int[] { 32, 32, 32, 32, 32, 32, 32, 30 };
 
             return View();
         }
