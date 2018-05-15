@@ -10,23 +10,72 @@ namespace CourseWork_ASP_NET_MVC.Models
         public CinemaContext()
             : base("name=CinemaContext")
         {
-          //TimeSpan s = new TimeSpan()
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            // movie config
+            modelBuilder.Configurations.Add(new MovieConfig());
+
+            // seance config
+            modelBuilder.Configurations.Add(new SeanceConfig());
+
+            // actor config
+            modelBuilder.Entity<Actor>()
+                .Property(a => a.Name)
+                .HasMaxLength(50)
+                .IsRequired();
+
+            modelBuilder.Entity<Actor>()
+                .Property(a => a.Surname)
+                .HasMaxLength(50)
+                .IsRequired();
+
+            // status config
+            modelBuilder.Entity<ShowStatus>()
+                .Property(a => a.Name)
+                .HasMaxLength(50)
+                .IsRequired();
+
+            // genre config
+            modelBuilder.Entity<Genre>()
+                .Property(a => a.Name)
+                .HasMaxLength(50)
+                .IsRequired();
+
+            // country config
+            modelBuilder.Entity<Country>()
+                .Property(a => a.Name)
+                .HasMaxLength(50)
+                .IsRequired();
+
+            // cinema hall config
+            modelBuilder.Entity<CinemaHall>()
+                .Property(a => a.Name)
+                .HasMaxLength(50)
+                .IsRequired();
+
+            modelBuilder.Entity<CinemaHall>()
+                .Property(a => a.Schema)                
+                .IsRequired();
         }
 
         public virtual DbSet<Movie> Movies { get; set; }
         public virtual DbSet<ShowStatus> ShowStatuses { get; set; }
-        public virtual DbSet<Artist> Artists { get; set; }
+        public virtual DbSet<Actor> Actors { get; set; }
         public virtual DbSet<Genre> Genres { get; set; }
         public virtual DbSet<Country> Countries { get; set; }
+        public virtual DbSet<CinemaHall> CinemaHalls { get; set; }
+        public virtual DbSet<Seance> Seances { get; set; }
     }
 
     public class Movie
     {
         public Movie()
         {
-            Artists = new HashSet<Artist>();
+            Actors = new HashSet<Actor>();
             Genres = new HashSet<Genre>();
-            Sessions = new HashSet<Session>();
+            Seances = new HashSet<Seance>();
         }
         public int Id { get; set; }
         public string Name { get; set; }
@@ -35,27 +84,27 @@ namespace CourseWork_ASP_NET_MVC.Models
         public int CountryId { get; set; }
         public virtual Country Country { get; set; }
 
-        public string ProducerName { get; set; }
+        public string DirectorName { get; set; }
         public byte[] Cover { get; set; }
         public TimeSpan Duration { get; set; }
 
-        public DateTime BeginShow { get; set; }
-        public DateTime EndShow { get; set; }
+        public DateTime ReleaseDate { get; set; }
+        public DateTime EndShowDate { get; set; }
 
         public int ShowStatusId { get; set; }
         public virtual ShowStatus ShowStatus { get; set; }
 
-        // collection of artists
-        public virtual ICollection<Artist> Artists { get; set; }
+        // collection of actors
+        public virtual ICollection<Actor> Actors { get; set; }
         // collection of genres
         public virtual ICollection<Genre> Genres { get; set; }
-        // collection of sessions
-        public virtual ICollection<Session> Sessions { get; set; }
+        // collection of seances
+        public virtual ICollection<Seance> Seances { get; set; }
     }
 
-    public class Artist
+    public class Actor
     {
-        public Artist()
+        public Actor()
         {
             Movies = new HashSet<Movie>();
         }
@@ -72,14 +121,15 @@ namespace CourseWork_ASP_NET_MVC.Models
         public ShowStatus()
         {
             Movies = new HashSet<Movie>();
+            Seances = new HashSet<Seance>();
         }
         public int Id { get; set; }
         public string Name { get; set; }
 
         // collection of movies
         public virtual ICollection<Movie> Movies { get; set; }
-        // collection of sessoins
-        public virtual ICollection<Session> Sessions { get; set; }
+        // collection of seances
+        public virtual ICollection<Seance> Seances { get; set; }
     }
 
     public class Genre
@@ -114,17 +164,17 @@ namespace CourseWork_ASP_NET_MVC.Models
     {
         public CinemaHall()
         {
-            Sessions = new HashSet<Session>();
+            Seances = new HashSet<Seance>();
         }
         public int Id { get; set; }
         public string Name { get; set; }
         public string Schema { get; set; }
 
-        // collection of sessions
-        public virtual ICollection<Session> Sessions { get; set; }
+        // collection of seances
+        public virtual ICollection<Seance> Seances { get; set; }
     }
 
-    public class Session
+    public class Seance
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }

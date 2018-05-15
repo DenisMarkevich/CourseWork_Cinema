@@ -153,6 +153,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CinemaContext.cs" />
+    <Compile Include="Models\CinemaDbInitializer.cs" />
+    <Compile Include="Models\MovieConfig.cs" />
+    <Compile Include="Models\SeanceConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
